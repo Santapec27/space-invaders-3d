@@ -1,0 +1,28 @@
+{
+  "name": "nave_mk2_mesh_obj",
+  "armature": "nave_mk2",
+  "triangles": 9308,
+  "size_blender": [
+    1.3953522443771362,
+    1.1003997325897217,
+    0.23282025754451752
+  ],
+  "center_blender": [
+    5.960464477539063e-08,
+    0.0,
+    0.0
+  ],
+  "size_godot": [
+    1.3953522443771362,
+    0.23282025754451752,
+    1.1003997325897217
+  ],
+  "nla_tracks": [
+    "Idle-loop",
+    "Fire",
+    "Hit",
+    "Spawn",
+    "Victory",
+    "Death"
+  ]
+}

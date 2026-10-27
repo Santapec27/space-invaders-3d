@@ -1,0 +1,556 @@
+[gd_scene load_steps=18 format=3 uid="uid://cm0bm1t80gvxu"]
+
+[ext_resource type="Script" path="res://scripts/hud.gd" id="1_hud"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hud_frame"]
+bg_color = Color(0.02, 0.025, 0.06, 0.92)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0.92, 1, 0.95)
+corner_radius_top_left = 22
+corner_radius_top_right = 22
+corner_radius_bottom_right = 22
+corner_radius_bottom_left = 22
+shadow_color = Color(0, 0.85, 1, 0.35)
+shadow_size = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_menu_title"]
+font_size = 54
+font_color = Color(0.35, 0.95, 1, 1)
+shadow_size = 18
+shadow_color = Color(0, 0.85, 1, 0.95)
+
+[sub_resource type="LabelSettings" id="LabelSettings_menu_subtitle"]
+font_size = 20
+font_color = Color(1, 0.22, 0.68, 1)
+shadow_size = 10
+shadow_color = Color(1, 0.1, 0.55, 0.85)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_start"]
+bg_color = Color(0.14, 0.02, 0.08, 0.95)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 0.18, 0.6, 1)
+corner_radius_top_left = 14
+corner_radius_top_right = 14
+corner_radius_bottom_right = 14
+corner_radius_bottom_left = 14
+shadow_color = Color(1, 0.18, 0.6, 0.5)
+shadow_size = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_quit"]
+bg_color = Color(0.08, 0.02, 0.14, 0.95)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.68, 0.35, 1, 1)
+corner_radius_top_left = 14
+corner_radius_top_right = 14
+corner_radius_bottom_right = 14
+corner_radius_bottom_left = 14
+shadow_color = Color(0.68, 0.35, 1, 0.45)
+shadow_size = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sub_btn"]
+bg_color = Color(0.02, 0.08, 0.12, 0.9)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0.9, 1, 0.85)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0.9, 1, 0.3)
+shadow_size = 8
+
+[sub_resource type="LabelSettings" id="LabelSettings_menu_highscore"]
+font_size = 20
+font_color = Color(0.1, 0.95, 0.9, 1)
+shadow_size = 8
+shadow_color = Color(0, 0.9, 0.9, 0.65)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gameover_frame"]
+bg_color = Color(0.04, 0.01, 0.03, 0.94)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 0.12, 0.25, 0.95)
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
+shadow_color = Color(1, 0.05, 0.2, 0.45)
+shadow_size = 22
+
+[sub_resource type="LabelSettings" id="LabelSettings_gameover_header"]
+font_size = 14
+font_color = Color(0.9, 0.35, 1, 1)
+shadow_size = 6
+shadow_color = Color(0.8, 0.1, 0.9, 0.7)
+
+[sub_resource type="LabelSettings" id="LabelSettings_gameover_title"]
+font_size = 64
+font_color = Color(1, 0.15, 0.25, 1)
+shadow_size = 24
+shadow_color = Color(1, 0.02, 0.15, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_gameover_sub"]
+font_size = 16
+font_color = Color(1, 0.45, 0.25, 0.9)
+shadow_size = 6
+shadow_color = Color(1, 0.2, 0.1, 0.7)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_score_badge"]
+bg_color = Color(0.01, 0.05, 0.08, 0.95)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0.9, 1, 0.9)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+shadow_color = Color(0, 0.9, 1, 0.35)
+shadow_size = 10
+
+[sub_resource type="LabelSettings" id="LabelSettings_go_highscore"]
+font_size = 20
+font_color = Color(0.88, 0.35, 1, 1)
+shadow_size = 8
+shadow_color = Color(0.75, 0.1, 0.9, 0.75)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_cyan"]
+bg_color = Color(0.01, 0.06, 0.1, 0.95)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0.92, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0.92, 1, 0.5)
+shadow_size = 14
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_top_bar"]
+bg_color = Color(0.015, 0.02, 0.05, 0.75)
+border_width_bottom = 2
+border_color = Color(0, 0.85, 1, 0.5)
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_hud")
+
+[node name="HUDPanel" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="TopBar" type="Panel" parent="HUDPanel"]
+custom_minimum_size = Vector2(0, 72)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 72.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_top_bar")
+
+[node name="HBoxTop" type="HBoxContainer" parent="HUDPanel/TopBar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 32.0
+offset_right = -32.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="ScoreBox" type="VBoxContainer" parent="HUDPanel/TopBar/HBoxTop"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="ScoreTitle" type="Label" parent="HUDPanel/TopBar/HBoxTop/ScoreBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.9, 1, 1)
+theme_override_font_sizes/font_size = 14
+text = "SCORE"
+
+[node name="ScoreVal" type="Label" parent="HUDPanel/TopBar/HBoxTop/ScoreBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 24
+text = "00,000"
+
+[node name="HighScoreBox" type="VBoxContainer" parent="HUDPanel/TopBar/HBoxTop"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="HighScoreTitle" type="Label" parent="HUDPanel/TopBar/HBoxTop/HighScoreBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.25, 0.8, 1)
+theme_override_font_sizes/font_size = 14
+text = "HIGH SCORE"
+horizontal_alignment = 1
+
+[node name="HighScoreVal" type="Label" parent="HUDPanel/TopBar/HBoxTop/HighScoreBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.9, 0.4, 1)
+theme_override_font_sizes/font_size = 24
+text = "48,760"
+horizontal_alignment = 1
+
+[node name="WaveBox" type="VBoxContainer" parent="HUDPanel/TopBar/HBoxTop"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="WaveTitle" type="Label" parent="HUDPanel/TopBar/HBoxTop/WaveBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.2, 1, 0.5, 1)
+theme_override_font_sizes/font_size = 14
+text = "WAVE"
+horizontal_alignment = 2
+
+[node name="WaveVal" type="Label" parent="HUDPanel/TopBar/HBoxTop/WaveBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 24
+text = "1"
+horizontal_alignment = 2
+
+[node name="BottomBar" type="HBoxContainer" parent="HUDPanel"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 32.0
+offset_top = -54.0
+offset_right = -32.0
+offset_bottom = -14.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="LivesTitle" type="Label" parent="HUDPanel/BottomBar"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.9, 1, 0.9)
+theme_override_font_sizes/font_size = 16
+text = "SHIPS: "
+
+[node name="LivesVal" type="Label" parent="HUDPanel/BottomBar"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.2, 1, 0.8, 1)
+theme_override_font_sizes/font_size = 22
+text = "🚀 🚀 🚀"
+
+[node name="MenuOverlay" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="FondoOscuro" type="ColorRect" parent="MenuOverlay"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.015, 0.01, 0.03, 0.72)
+
+[node name="Centro" type="CenterContainer" parent="MenuOverlay"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarcoHUD" type="PanelContainer" parent="MenuOverlay/Centro"]
+custom_minimum_size = Vector2(880, 560)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_hud_frame")
+
+[node name="VBox" type="VBoxContainer" parent="MenuOverlay/Centro/MarcoHUD"]
+layout_mode = 2
+theme_override_constants/separation = 22
+alignment = 1
+
+[node name="TituloBox" type="VBoxContainer" parent="MenuOverlay/Centro/MarcoHUD/VBox"]
+layout_mode = 2
+theme_override_constants/separation = 4
+alignment = 1
+
+[node name="LblTitulo" type="Label" parent="MenuOverlay/Centro/MarcoHUD/VBox/TituloBox"]
+layout_mode = 2
+text = "SPACE INVADERS"
+label_settings = SubResource("LabelSettings_menu_title")
+horizontal_alignment = 1
+
+[node name="LblSubtitulo" type="Label" parent="MenuOverlay/Centro/MarcoHUD/VBox/TituloBox"]
+layout_mode = 2
+text = "✦ 3D ARCADE ✦"
+label_settings = SubResource("LabelSettings_menu_subtitle")
+horizontal_alignment = 1
+
+[node name="HBoxCentro" type="HBoxContainer" parent="MenuOverlay/Centro/MarcoHUD/VBox"]
+layout_mode = 2
+theme_override_constants/separation = 36
+alignment = 1
+
+[node name="AliensIzq" type="Label" parent="MenuOverlay/Centro/MarcoHUD/VBox/HBoxCentro"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.9, 1, 0.8)
+theme_override_font_sizes/font_size = 18
+text = "    ▲
+   ▲▲▲
+  ▲▲▲▲▲
+ ▲▲▲▲▲▲▲"
+horizontal_alignment = 1
+
+[node name="BotonesPrincipales" type="VBoxContainer" parent="MenuOverlay/Centro/MarcoHUD/VBox/HBoxCentro"]
+custom_minimum_size = Vector2(290, 0)
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="StartBtn" type="Button" parent="MenuOverlay/Centro/MarcoHUD/VBox/HBoxCentro/BotonesPrincipales"]
+custom_minimum_size = Vector2(290, 60)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.9, 0.95, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn_start")
+theme_override_styles/hover = SubResource("StyleBoxFlat_btn_start")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_btn_start")
+text = "START"
+
+[node name="QuitBtn" type="Button" parent="MenuOverlay/Centro/MarcoHUD/VBox/HBoxCentro/BotonesPrincipales"]
+custom_minimum_size = Vector2(290, 60)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.95, 0.85, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn_quit")
+theme_override_styles/hover = SubResource("StyleBoxFlat_btn_quit")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_btn_quit")
+text = "QUIT"
+
+[node name="AliensDer" type="Label" parent="MenuOverlay/Centro/MarcoHUD/VBox/HBoxCentro"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.2, 0.7, 0.8)
+theme_override_font_sizes/font_size = 18
+text = "    ▲
+   ▲▲▲
+  ▲▲▲▲▲
+ ▲▲▲▲▲▲▲"
+horizontal_alignment = 1
+
+[node name="BotonesSecundarios" type="HBoxContainer" parent="MenuOverlay/Centro/MarcoHUD/VBox"]
+layout_mode = 2
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="OptionsBtn" type="Button" parent="MenuOverlay/Centro/MarcoHUD/VBox/BotonesSecundarios"]
+custom_minimum_size = Vector2(170, 42)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.4, 0.95, 1, 1)
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = SubResource("StyleBoxFlat_sub_btn")
+theme_override_styles/hover = SubResource("StyleBoxFlat_sub_btn")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_sub_btn")
+text = "OPTIONS"
+
+[node name="HighScoresBtn" type="Button" parent="MenuOverlay/Centro/MarcoHUD/VBox/BotonesSecundarios"]
+custom_minimum_size = Vector2(170, 42)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.4, 0.95, 1, 1)
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = SubResource("StyleBoxFlat_sub_btn")
+theme_override_styles/hover = SubResource("StyleBoxFlat_sub_btn")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_sub_btn")
+text = "HIGH SCORES"
+
+[node name="PieBox" type="VBoxContainer" parent="MenuOverlay/Centro/MarcoHUD/VBox"]
+layout_mode = 2
+theme_override_constants/separation = 4
+alignment = 1
+
+[node name="MenuHighScore" type="Label" parent="MenuOverlay/Centro/MarcoHUD/VBox/PieBox"]
+layout_mode = 2
+text = "HIGH SCORE: 48,760"
+label_settings = SubResource("LabelSettings_menu_highscore")
+horizontal_alignment = 1
+
+[node name="GameOverOverlay" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Fondo" type="ColorRect" parent="GameOverOverlay"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.03, 0.01, 0.03, 0.88)
+
+[node name="Centro" type="CenterContainer" parent="GameOverOverlay"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarcoArcade" type="PanelContainer" parent="GameOverOverlay/Centro"]
+custom_minimum_size = Vector2(840, 540)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_gameover_frame")
+
+[node name="VBox" type="VBoxContainer" parent="GameOverOverlay/Centro/MarcoArcade"]
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="HeaderBox" type="HBoxContainer" parent="GameOverOverlay/Centro/MarcoArcade/VBox"]
+layout_mode = 2
+alignment = 1
+
+[node name="LblHeader" type="Label" parent="GameOverOverlay/Centro/MarcoArcade/VBox/HeaderBox"]
+layout_mode = 2
+text = "SPACE INVADERS 3D - ARCADE NEON EDITION"
+label_settings = SubResource("LabelSettings_gameover_header")
+horizontal_alignment = 1
+
+[node name="TituloBox" type="VBoxContainer" parent="GameOverOverlay/Centro/MarcoArcade/VBox"]
+layout_mode = 2
+theme_override_constants/separation = 6
+alignment = 1
+
+[node name="Title" type="Label" parent="GameOverOverlay/Centro/MarcoArcade/VBox/TituloBox"]
+layout_mode = 2
+text = "GAME OVER"
+label_settings = SubResource("LabelSettings_gameover_title")
+horizontal_alignment = 1
+
+[node name="SubTitle" type="Label" parent="GameOverOverlay/Centro/MarcoArcade/VBox/TituloBox"]
+layout_mode = 2
+text = "INSERT COIN TO CONTINUE\nGAME IS LOST"
+label_settings = SubResource("LabelSettings_gameover_sub")
+horizontal_alignment = 1
+
+[node name="ScoreBox" type="CenterContainer" parent="GameOverOverlay/Centro/MarcoArcade/VBox"]
+layout_mode = 2
+
+[node name="HBoxScore" type="HBoxContainer" parent="GameOverOverlay/Centro/MarcoArcade/VBox/ScoreBox"]
+layout_mode = 2
+theme_override_constants/separation = 28
+alignment = 1
+
+[node name="PanelFinalScore" type="PanelContainer" parent="GameOverOverlay/Centro/MarcoArcade/VBox/ScoreBox/HBoxScore"]
+custom_minimum_size = Vector2(290, 54)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_score_badge")
+
+[node name="FinalScoreVal" type="Label" parent="GameOverOverlay/Centro/MarcoArcade/VBox/ScoreBox/HBoxScore/PanelFinalScore"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.95, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "FINAL SCORE: 88,340"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GameOverHighScoreVal" type="Label" parent="GameOverOverlay/Centro/MarcoArcade/VBox/ScoreBox/HBoxScore"]
+layout_mode = 2
+text = "HIGHSCORE: 125,760"
+label_settings = SubResource("LabelSettings_go_highscore")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BotonesBox" type="HBoxContainer" parent="GameOverOverlay/Centro/MarcoArcade/VBox"]
+layout_mode = 2
+theme_override_constants/separation = 40
+alignment = 1
+
+[node name="RestartBtn" type="Button" parent="GameOverOverlay/Centro/MarcoArcade/VBox/BotonesBox"]
+custom_minimum_size = Vector2(210, 56)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.2, 0.95, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn_cyan")
+theme_override_styles/hover = SubResource("StyleBoxFlat_btn_cyan")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_btn_cyan")
+text = "↻ RETRY"
+
+[node name="MenuBtn" type="Button" parent="GameOverOverlay/Centro/MarcoArcade/VBox/BotonesBox"]
+custom_minimum_size = Vector2(210, 56)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.2, 0.95, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn_cyan")
+theme_override_styles/hover = SubResource("StyleBoxFlat_btn_cyan")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_btn_cyan")
+text = "⌂ MENU"
+
+[node name="WaveOverlay" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="WaveTitle" type="Label" parent="WaveOverlay"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -30.0
+offset_right = 300.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 1, 0.8, 1)
+theme_override_colors/font_shadow_color = Color(0, 0.8, 1, 0.8)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_font_sizes/font_size = 46
+text = "WAVE 1 CLEARED!"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="MenuOverlay/Centro/MarcoHUD/VBox/HBoxCentro/BotonesPrincipales/StartBtn" to="." method="_on_start_btn_pressed"]
+[connection signal="pressed" from="MenuOverlay/Centro/MarcoHUD/VBox/HBoxCentro/BotonesPrincipales/QuitBtn" to="." method="_on_quit_btn_pressed"]
+[connection signal="pressed" from="MenuOverlay/Centro/MarcoHUD/VBox/BotonesSecundarios/OptionsBtn" to="." method="_on_options_btn_pressed"]
+[connection signal="pressed" from="MenuOverlay/Centro/MarcoHUD/VBox/BotonesSecundarios/HighScoresBtn" to="." method="_on_high_scores_btn_pressed"]
+[connection signal="pressed" from="GameOverOverlay/Centro/MarcoArcade/VBox/BotonesBox/RestartBtn" to="." method="_on_restart_btn_pressed"]
+[connection signal="pressed" from="GameOverOverlay/Centro/MarcoArcade/VBox/BotonesBox/MenuBtn" to="." method="_on_menu_btn_pressed"]

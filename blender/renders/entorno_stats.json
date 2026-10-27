@@ -1,0 +1,24 @@
+{
+  "nombre": "Planeta Orbital de Fondo",
+  "triangulos": 29776,
+  "tam_blender": [
+    3.3156468868255615,
+    3.115200996398926,
+    1.7000000476837158
+  ],
+  "tam_godot": [
+    3.3156468868255615,
+    1.7000000476837158,
+    3.115200996398926
+  ],
+  "centro": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "ruta_glb": "c:\\Users\\santa\\OneDrive\\Desktop\\space inverder Godot+Blender\\assets\\models\\entorno\\planeta_fondo.glb",
+  "ruta_blend": "c:\\Users\\santa\\OneDrive\\Desktop\\space inverder Godot+Blender\\blender\\src\\planeta_fondo.blend",
+  "clips": [
+    "Idle-loop"
+  ]
+}

@@ -1,0 +1,157 @@
+{
+  "mk1": {
+    "nivel": 1,
+    "nombre": "Vanguard",
+    "sufijo": "mk1",
+    "triangulos": 30300,
+    "tam_blender": [
+      1.2219502925872803,
+      1.1036131978034973,
+      0.23482444882392883
+    ],
+    "tam_godot": [
+      1.2219502925872803,
+      0.23482444882392883,
+      1.1036131978034973
+    ],
+    "centro": [
+      0.0,
+      2.9802322387695312e-08,
+      0.0
+    ],
+    "ruta_glb": "c:\\Users\\santa\\OneDrive\\Desktop\\space inverder Godot+Blender\\assets\\models\\jugador\\nave_mk1.glb",
+    "ruta_blend": "c:\\Users\\santa\\OneDrive\\Desktop\\space inverder Godot+Blender\\blender\\src\\nave_mk1.blend",
+    "clips": [
+      "Idle-loop",
+      "Fire",
+      "Hit",
+      "Spawn",
+      "Victory",
+      "Death"
+    ]
+  },
+  "mk2": {
+    "nivel": 2,
+    "nombre": "Striker",
+    "sufijo": "mk2",
+    "triangulos": 38564,
+    "tam_blender": [
+      1.5482730865478516,
+      1.1459453105926514,
+      0.26044636964797974
+    ],
+    "tam_godot": [
+      1.5482730865478516,
+      0.26044636964797974,
+      1.1459453105926514
+    ],
+    "centro": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "ruta_glb": "c:\\Users\\santa\\OneDrive\\Desktop\\space inverder Godot+Blender\\assets\\models\\jugador\\nave_mk2.glb",
+    "ruta_blend": "c:\\Users\\santa\\OneDrive\\Desktop\\space inverder Godot+Blender\\blender\\src\\nave_mk2.blend",
+    "clips": [
+      "Idle-loop",
+      "Fire",
+      "Hit",
+      "Spawn",
+      "Victory",
+      "Death"
+    ]
+  },
+  "mk3": {
+    "nivel": 3,
+    "nombre": "Phantom",
+    "sufijo": "mk3",
+    "triangulos": 48132,
+    "tam_blender": [
+      1.6043627262115479,
+      1.2059355974197388,
+      0.23485267162322998
+    ],
+    "tam_godot": [
+      1.6043627262115479,
+      0.23485267162322998,
+      1.2059355974197388
+    ],
+    "centro": [
+      5.960464477539063e-08,
+      -5.960464477539063e-08,
+      0.0
+    ],
+    "ruta_glb": "c:\\Users\\santa\\OneDrive\\Desktop\\space inverder Godot+Blender\\assets\\models\\jugador\\nave_mk3.glb",
+    "ruta_blend": "c:\\Users\\santa\\OneDrive\\Desktop\\space inverder Godot+Blender\\blender\\src\\nave_mk3.blend",
+    "clips": [
+      "Idle-loop",
+      "Fire",
+      "Hit",
+      "Spawn",
+      "Victory",
+      "Death"
+    ]
+  },
+  "mk4": {
+    "nivel": 4,
+    "nombre": "Titan",
+    "sufijo": "mk4",
+    "triangulos": 59648,
+    "tam_blender": [
+      1.589231252670288,
+      1.12931627035141,
+      0.24861228466033936
+    ],
+    "tam_godot": [
+      1.589231252670288,
+      0.24861228466033936,
+      1.12931627035141
+    ],
+    "centro": [
+      0.0,
+      -2.9802322387695312e-08,
+      0.0
+    ],
+    "ruta_glb": "c:\\Users\\santa\\OneDrive\\Desktop\\space inverder Godot+Blender\\assets\\models\\jugador\\nave_mk4.glb",
+    "ruta_blend": "c:\\Users\\santa\\OneDrive\\Desktop\\space inverder Godot+Blender\\blender\\src\\nave_mk4.blend",
+    "clips": [
+      "Idle-loop",
+      "Fire",
+      "Hit",
+      "Spawn",
+      "Victory",
+      "Death"
+    ]
+  },
+  "mk5": {
+    "nivel": 5,
+    "nombre": "Apex",
+    "sufijo": "mk5",
+    "triangulos": 69064,
+    "tam_blender": [
+      1.7153146862983704,
+      1.1241864562034607,
+      0.2631792426109314
+    ],
+    "tam_godot": [
+      1.7153146862983704,
+      0.2631792426109314,
+      1.1241864562034607
+    ],
+    "centro": [
+      2.9802322387695312e-08,
+      -2.9802322387695312e-08,
+      0.0
+    ],
+    "ruta_glb": "c:\\Users\\santa\\OneDrive\\Desktop\\space inverder Godot+Blender\\assets\\models\\jugador\\nave_mk5.glb",
+    "ruta_blend": "c:\\Users\\santa\\OneDrive\\Desktop\\space inverder Godot+Blender\\blender\\src\\nave_mk5.blend",
+    "clips": [
+      "Idle-loop",
+      "Fire",
+      "Hit",
+      "Spawn",
+      "Victory",
+      "Death"
+    ]
+  }
+}

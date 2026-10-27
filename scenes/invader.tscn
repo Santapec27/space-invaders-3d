@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://g74drr0fnouh"]
+
+[ext_resource type="Script" path="res://scripts/invader.gd" id="1_invader"]
+[ext_resource type="PackedScene" path="res://assets/models/enemigos/enemigo_a.glb" id="2_enemigo_a"]
+[ext_resource type="PackedScene" path="res://assets/models/enemigos/enemigo_b.glb" id="3_enemigo_b"]
+[ext_resource type="PackedScene" path="res://assets/models/enemigos/enemigo_c.glb" id="4_enemigo_c"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_invader"]
+size = Vector3(1.6, 1.0, 1.4)
+
+[node name="Invader" type="Area3D" groups=["invader"]]
+script = ExtResource("1_invader")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_invader")
+
+[node name="Visual" type="Node3D" parent="."]
+
+[node name="ModelA" parent="Visual" instance=ExtResource("2_enemigo_a")]
+transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 0, 0, 0)
+visible = false
+
+[node name="ModelB" parent="Visual" instance=ExtResource("3_enemigo_b")]
+transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 0, 0, 0)
+visible = false
+
+[node name="ModelC" parent="Visual" instance=ExtResource("4_enemigo_c")]
+transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 0, 0, 0)
+visible = false
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
+light_color = Color(1, 0.1, 0.85, 1)
+light_energy = 0.8
+omni_range = 1.8

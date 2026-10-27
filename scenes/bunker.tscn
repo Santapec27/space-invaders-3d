@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://b8iyh7cqg50to"]
+
+[ext_resource type="Script" uid="uid://dqrfnpvmg6e8g" path="res://scripts/bunker.gd" id="1_bunker"]
+
+[node name="Bunker" type="Node3D" unique_id=890283890]
+script = ExtResource("1_bunker")

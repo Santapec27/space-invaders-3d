@@ -1,0 +1,31 @@
+{
+  "nivel": 2,
+  "nombre": "Striker",
+  "sufijo": "mk2",
+  "triangulos": 38564,
+  "tam_blender": [
+    1.5482730865478516,
+    1.1459453105926514,
+    0.26044636964797974
+  ],
+  "tam_godot": [
+    1.5482730865478516,
+    0.26044636964797974,
+    1.1459453105926514
+  ],
+  "centro": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "ruta_glb": "c:\\Users\\santa\\OneDrive\\Desktop\\space inverder Godot+Blender\\assets\\models\\jugador\\nave_mk2.glb",
+  "ruta_blend": "c:\\Users\\santa\\OneDrive\\Desktop\\space inverder Godot+Blender\\blender\\src\\nave_mk2.blend",
+  "clips": [
+    "Idle-loop",
+    "Fire",
+    "Hit",
+    "Spawn",
+    "Victory",
+    "Death"
+  ]
+}

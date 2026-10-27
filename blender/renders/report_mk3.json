@@ -1,0 +1,31 @@
+{
+  "nivel": 3,
+  "nombre": "Phantom",
+  "sufijo": "mk3",
+  "triangulos": 48132,
+  "tam_blender": [
+    1.6043627262115479,
+    1.2059355974197388,
+    0.23485267162322998
+  ],
+  "tam_godot": [
+    1.6043627262115479,
+    0.23485267162322998,
+    1.2059355974197388
+  ],
+  "centro": [
+    5.960464477539063e-08,
+    -5.960464477539063e-08,
+    0.0
+  ],
+  "ruta_glb": "c:\\Users\\santa\\OneDrive\\Desktop\\space inverder Godot+Blender\\assets\\models\\jugador\\nave_mk3.glb",
+  "ruta_blend": "c:\\Users\\santa\\OneDrive\\Desktop\\space inverder Godot+Blender\\blender\\src\\nave_mk3.blend",
+  "clips": [
+    "Idle-loop",
+    "Fire",
+    "Hit",
+    "Spawn",
+    "Victory",
+    "Death"
+  ]
+}

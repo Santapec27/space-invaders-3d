@@ -1,0 +1,101 @@
+[gd_scene format=3 uid="uid://c8fhjr2fhglkg"]
+
+[ext_resource type="Script" uid="uid://dnu3mwsdkgjta" path="res://scripts/main.gd" id="1_main"]
+[ext_resource type="PackedScene" uid="uid://cm0bm1t80gvxu" path="res://scenes/hud.tscn" id="2_hud"]
+[ext_resource type="PackedScene" uid="uid://bocpjd61drea3" path="res://assets/models/entorno/planeta_fondo.glb" id="3_planeta"]
+
+[sub_resource type="Environment" id="Environment_space"]
+background_mode = 1
+background_color = Color(0.012, 0.01, 0.03, 1)
+ambient_light_color = Color(0.12, 0.1, 0.25, 1)
+tonemap_mode = 3
+glow_enabled = true
+glow_intensity = 0.55
+glow_strength = 0.82
+glow_bloom = 0.1
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mro2p"]
+albedo_color = Color(0.5019608, 1, 1, 0.78431374)
+metallic = 1.0
+emission_enabled = true
+emission = Color(0, 4.03068, 3.6965663, 1)
+emission_energy_multiplier = 3.0
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_rww8g"]
+material = SubResource("StandardMaterial3D_mro2p")
+radius = 0.0685
+height = 0.137
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_floor"]
+albedo_color = Color(0.02, 0.015, 0.06, 1)
+roughness = 0.8
+emission_enabled = true
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_floor"]
+material = SubResource("StandardMaterial3D_floor")
+size = Vector2(80, 80)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_grid"]
+albedo_color = Color(0.42, 0.08, 0.52, 1)
+emission_enabled = true
+emission = Color(0.5, 0.08, 0.62, 1)
+emission_energy_multiplier = 0.4
+
+[sub_resource type="BoxMesh" id="BoxMesh_bound"]
+material = SubResource("StandardMaterial3D_grid")
+size = Vector3(0.2, 0.2, 80)
+
+[node name="Main" type="Node3D" unique_id=1918898525]
+script = ExtResource("1_main")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=493252262]
+environment = SubResource("Environment_space")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1985443329]
+transform = Transform3D(0.866025, -0.353553, 0.353553, 0, 0.707107, 0.707107, -0.5, -0.612372, 0.612372, 0, 20, 0)
+light_color = Color(0.85, 0.88, 1, 1)
+light_energy = 1.1
+
+[node name="CenterGlowLight" type="OmniLight3D" parent="." unique_id=730060627]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
+light_color = Color(0.5, 0.1, 0.8, 1)
+light_energy = 1.2
+omni_range = 30.0
+
+[node name="PlanetIllumination" type="OmniLight3D" parent="." unique_id=1773397707]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8, -18)
+light_color = Color(0.7, 0.85, 1, 1)
+light_energy = 2.4
+omni_range = 35.0
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=863978426]
+transform = Transform3D(1, 0, 0, 0, 0.669131, 0.743145, 0, -0.743145, 0.669131, 0, 24, 22)
+fov = 65.0
+
+[node name="PlanetaFondo" parent="." unique_id=5920798 instance=ExtResource("3_planeta")]
+transform = Transform3D(7.5, 0, 0, 0, 6.49, 3.75, 0, -3.75, 6.49, 0, 0.5, -34)
+
+[node name="Starfield" type="CPUParticles3D" parent="." unique_id=873013009]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.9088762, 0, 8, -9.295244)
+amount = 279
+lifetime = 9.0
+preprocess = 7.0
+mesh = SubResource("CapsuleMesh_rww8g")
+emission_shape = 3
+emission_box_extents = Vector3(38, 20, 18)
+gravity = Vector3(0, 0, 0.7)
+linear_accel_max = 13.0
+
+[node name="FloorGrid" type="MeshInstance3D" parent="." unique_id=366547475]
+transform = Transform3D(3.2455, 0, 0, 0, 1.008485, 0, 0, 0, 3.2455373, 0, -1, 0)
+mesh = SubResource("PlaneMesh_floor")
+
+[node name="LeftBoundary" type="MeshInstance3D" parent="." unique_id=2112720119]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.7888057, -19.5, -0.9, 0)
+mesh = SubResource("BoxMesh_bound")
+
+[node name="RightBoundary" type="MeshInstance3D" parent="." unique_id=2138028408]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.7875171, 19.5, -0.9, 0)
+mesh = SubResource("BoxMesh_bound")
+
+[node name="HUD" parent="." unique_id=138726971 instance=ExtResource("2_hud")]
