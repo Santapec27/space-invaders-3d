@@ -82,9 +82,9 @@ El proyecto desacopla la física (`Area3D`) de la representación visual (`Node3
       <td align="center"><img src="blender/renders/enemigo_c_isometrica.png" width="220"/><br/><b>Enemigo C «Behemoth»</b><br/><sub>Filas 4–5 · 10 PTS · #FFD700</sub></td>
     </tr>
     <tr>
-      <td align="center"><img src="blender/renders/nave_mk2_isometrica.png" width="220"/><br/><b>Nave Mk II «Striker»</b><br/><sub>Niveles 3–4 · #3D7BFF</sub></td>
-      <td align="center"><img src="blender/renders/nave_mk3_isometrica.png" width="220"/><br/><b>Nave Mk III «Phantom»</b><br/><sub>Niveles 5–6 · #00FFB3</sub></td>
-      <td align="center"><img src="blender/renders/nave_mk4_isometrica.png" width="220"/><br/><b>Nave Mk IV «Titan»</b><br/><sub>Niveles 7–8 · #FFB300</sub></td>
+      <td align="center"><img src="blender/renders/nave_mk2_hero.png" width="220"/><br/><b>Nave Mk II «Striker»</b><br/><sub>Niveles 3–4 · #3D7BFF</sub></td>
+      <td align="center"><img src="blender/renders/nave_mk3_hero.png" width="220"/><br/><b>Nave Mk III «Phantom»</b><br/><sub>Niveles 5–6 · #00FFB3</sub></td>
+      <td align="center"><img src="blender/renders/nave_mk4_hero.png" width="220"/><br/><b>Nave Mk IV «Titan»</b><br/><sub>Niveles 7–8 · #FFB300</sub></td>
     </tr>
   </table>
 </div>
@@ -185,7 +185,7 @@ En la carpeta [`blender/`](blender/) se encuentran tanto los archivos originales
 
 Para profundizar en las decisiones de ingeniería, matemáticas de animación y arquitectura del proyecto, consulta la carpeta [`docs/`](docs/):
 
-- 📄 [**Guía Técnica de Sustentación (`docs/SUSTENTACION.md`)**](docs/SUSTENTACION.md): Diagramas de estado, justificación matemática de curvas `Tween`, manejo de concurrencia en el Hit-Stop y preguntas frecuentes de arquitectura.
+- 📄 [**Profundización de Código (`docs/profundizacion_de_codigo.md`)**](docs/profundizacion_de_codigo.md): Diagramas de estado, justificación matemática de curvas `Tween`, manejo de concurrencia en el Hit-Stop y preguntas frecuentes de arquitectura.
 - 📐 [**Convenciones Técnicas (`docs/CONVENCIONES.md`)**](docs/CONVENCIONES.md): Escala métrica (`1 unidad = 1 metro`), ejes, matriz de capas de colisión y paleta de colores HEX.
 - 🗂️ [**Inventario del Sistema (`docs/inventario.md`)**](docs/inventario.md): Detalle de todas las escenas, singletons (`Autoload`), configuración de cámara e iluminación.
 - 🧊 [**Manifiesto de Assets 3D (`docs/assets_manifest.md`)**](docs/assets_manifest.md): Catálogo completo de modelos `.glb`, conteo de triángulos y animaciones integradas.

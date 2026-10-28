@@ -1,6 +1,6 @@
-# Guía Técnica de Sustentación Oral — Space Invaders 3D
-**Parcial 2 · Animación y Game Feel 3D · Godot 4.7 + Blender**
-*Documento de preparación para la defensa oral técnica del proyecto (Criterio Sustentación: 20%)*
+# Profundización de Código — Space Invaders 3D
+**Animación Procedural y Game Feel 3D · Godot 4.7 + Blender**
+*Documento de arquitectura interna y análisis técnico del código del proyecto*
 
 ---
 
@@ -211,4 +211,4 @@ Para que un modelo 3D coexista con animaciones internas de Blender y Tweens de G
 | **Eliminación 3D** | 25% | `scripts/invader.gd` | `eliminar_enemigo()` |
 | **Pantallas Finales Elásticas** | 25% | `scripts/hud.gd` | `_mostrar_pantalla_final()`, `show_wave_cleared()` |
 | **Creatividad (Micro-interacciones)** | 10% | Varios (`player.gd`, `invader.gd`, `bunker.gd`, `hud.gd`) | Flash, telegrafía, tilt, puntaje 3D, muzzle flash |
-| **Sustentación Técnica** | 20% | `docs/SUSTENTACION.md` | Guía completa de defensa oral y respuestas |
+| **Profundización Técnica** | 20% | `docs/profundizacion_de_codigo.md` | Análisis completo de arquitectura y código |
