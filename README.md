@@ -8,6 +8,7 @@
 [![Blender](https://img.shields.io/badge/Blender-3D_Pipeline-E87D0D?style=for-the-badge&logo=blender&logoColor=white)](https://www.blender.org/)
 [![GDScript](https://img.shields.io/badge/GDScript-Lógica_&_Tweens-355570?style=for-the-badge&logo=godotengine&logoColor=white)](#arquitectura-del-proyecto)
 [![Python](https://img.shields.io/badge/Python-Blender_Scripts-3776AB?style=for-the-badge&logo=python&logoColor=white)](#pipeline-3d-en-blender)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
 
 <p align="center">
   <img src="blender/renders/nave_mk1_hero.png" alt="Nave Mk I Vanguard" width="32%" />
@@ -190,3 +191,9 @@ Para profundizar en las decisiones de ingeniería, matemáticas de animación y 
 - 🗂️ [**Inventario del Sistema (`docs/inventario.md`)**](docs/inventario.md): Detalle de todas las escenas, singletons (`Autoload`), configuración de cámara e iluminación.
 - 🧊 [**Manifiesto de Assets 3D (`docs/assets_manifest.md`)**](docs/assets_manifest.md): Catálogo completo de modelos `.glb`, conteo de triángulos y animaciones integradas.
 - 📝 [**Bitácora de Desarrollo (`docs/bitacora.md`)**](docs/bitacora.md): Registro cronológico de implementación y resolución de problemas técnicos.
+
+---
+
+## 📄 Licencia
+
+Este proyecto se distribuye bajo la licencia **MIT**. Para más detalles, consulta el archivo [`LICENSE`](LICENSE).
